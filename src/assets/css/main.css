@@ -417,16 +417,18 @@ footer.site a:hover { color: var(--accent); }
   line-height: 1.2;
   white-space: nowrap;
 }
-.badge-role         { border-color: var(--accent); color: var(--accent); }
-.badge-project      { border-color: var(--ink); color: var(--ink); }
-.badge-standard     { border-color: var(--accent); color: var(--ink); background: color-mix(in srgb, var(--accent) 14%, transparent); }
-.badge-fellowship   { border-color: var(--accent-mute); color: var(--accent); }
-.badge-award        { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
-.badge-contribution { border-color: var(--ink-mute); color: var(--ink-mute); }
-.badge-press        { border-color: var(--ink-mute); color: var(--ink-mute); }
-.badge-talk         { border-color: var(--ink); color: var(--ink); }
-.badge-paper        { border-color: var(--ink); color: var(--ink); }
-.badge-post         { border-color: var(--ink-mute); color: var(--ink-mute); }
+/* All badges keep --ink text (always AAA-contrast against --bg)
+   and discriminate type via border color and an optional tint. */
+.badge-role         { border-color: var(--accent); }
+.badge-project      { border-color: var(--ink); }
+.badge-standard     { border-color: var(--accent); border-left-width: 4px; }
+.badge-fellowship   { border-color: var(--accent); border-style: dashed; }
+.badge-award        { border-color: var(--accent); border-left-width: 4px; border-style: double; }
+.badge-contribution { border-color: var(--ink-mute); }
+.badge-press        { border-color: var(--ink-mute); border-left-width: 4px; }
+.badge-talk         { border-color: var(--ink); border-left-width: 4px; }
+.badge-paper        { border-color: var(--ink); border-style: dashed; }
+.badge-post         { border-color: var(--ink-mute); border-style: dashed; }
 
 .legend {
   display: flex;
