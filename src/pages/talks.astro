@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Talks';
+const description =
+  'Talks log 2005 to present. Conferences, panels, lectures, and standards-body sessions on free software, public computing, AI infrastructure, and digital governance.';
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <header>
+      <span class="kicker">Talks</span>
+      <h1>Talks log.</h1>
+      <p class="lede">
+        Conferences, panels, lectures, and standards-body sessions from 2005
+        to present. Reverse chronological, filterable by year and venue once
+        the migration from the 2022 archive completes.
+      </p>
+    </header>
+
+    <section>
+      <h2>2025</h2>
+      <p class="tail">[populating from migration]</p>
+    </section>
+
+    <section>
+      <h2>Earlier</h2>
+      <p class="tail">
+        [pending — full chronological log from 2005 will be migrated from the
+        2022 archive with archive.org fallbacks for dead URLs.]
+      </p>
+    </section>
+  </article>
+</BaseLayout>

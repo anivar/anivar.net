@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Now';
+const description =
+  'What Anivar A. Aravind is working on this quarter — engineering leadership, OpenSLM.ai, the Corrigibility framework, and Layer 8.';
+
+const updated = '30 April 2026';
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <header>
+      <span class="kicker">Now</span>
+      <h1>This quarter.</h1>
+      <p class="tail">Last updated: {updated}.</p>
+    </header>
+
+    <p>
+      Enterprise AI transformation work — agentic governance, context and
+      memory architectures, production evaluation in regulated environments.
+      Boundaries between probabilistic inference and deterministic execution
+      are the load-bearing surface; that is where the engineering content has
+      moved.
+    </p>
+
+    <p>
+      OpenSLM.ai — the Open Small Models Accord (v0.2.0) shipped earlier this
+      month with the consent-gated Clarity analytics, the founder
+      attribution rebalance, and the structured glossary. Next: tooling
+      releases that operationalise LWD-R disclosures, and a small-model
+      evaluation harness aligned to the accord's ten principles.
+    </p>
+
+    <p>
+      Corrigibility — Paper&nbsp;I (DPI) is on SSRN at
+      <a href="https://doi.org/10.2139/ssrn.6059075">doi.org/10.2139/ssrn.6059075</a>;
+      Paper&nbsp;II (EPI) is on Zenodo at
+      <a href="https://doi.org/10.5281/zenodo.19863649">doi.org/10.5281/zenodo.19863649</a>;
+      EPI's SSRN DOI pending. The schema repository will land
+      <code>SPEC.md</code>, <code>RULES.md</code>, and
+      <code>MEASURES.md</code> as part of an appendix-vs-artifact separation
+      pass on the DPI paper.
+    </p>
+
+    <p>
+      Layer 8 — next pieces are on identity infrastructure economics and on
+      what corrigibility looks like for federated and continuously-learning
+      systems.
+    </p>
+
+    <p>
+      Selectively advising. Background interviews on request — see
+      <a href="/press/">/press/</a>.
+    </p>
+  </article>
+</BaseLayout>

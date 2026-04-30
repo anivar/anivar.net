@@ -1,0 +1,17 @@
+{
+  "$schema": "https://github.com/anivar/corrigibility-schema/raw/main/schema/infrastructure.schema.json",
+  "spec_version": "1.7-spec",
+  "system": {
+    "name": "anivar.net",
+    "operator": "Anivar A. Aravind",
+    "tier": "informational"
+  },
+  "tests": {
+    "exit": "n/a",
+    "code": "https://github.com/anivar/anivar-net",
+    "audit": "site source CC BY 4.0; build reproducible from source",
+    "govern": "n/a",
+    "fork": "git clone https://github.com/anivar/anivar-net && npm install && npm run build"
+  },
+  "issued": "2026-04-30"
+}

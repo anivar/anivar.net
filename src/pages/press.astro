@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Press';
+const description =
+  'For media. Bios at four lengths, portraits at print and web resolution, recent appearances, and a complete record of coverage of Anivar A. Aravind.';
+
+const bios = {
+  oneLine:
+    'Anivar A. Aravind is an engineering leader and systems thinker who has scaled regulated FinTech, B2B2C global commerce, and multilingual public computing used by hundreds of millions — with a continuing line of independent work at OpenSLM.ai, Corrigibility, and Layer 8.',
+  short:
+    'Anivar A. Aravind is an engineering leader and systems thinker. Two decades across regulated FinTech under RBI NBFC, B2B2C global commerce in six markets under PCI DSS, PSD2/SCA, and 3DS, and multilingual public computing used by hundreds of millions. He runs a continuing line of independent work at OpenSLM.ai, the Corrigibility framework, and Layer 8 on Substack.',
+  medium:
+    'Anivar A. Aravind is an engineering leader and systems thinker with two decades in the hard seat — where engineering has to ship commercially and hold up under board and public scrutiny at the same time. He has scaled B2B2C multi-tenant SaaS, marketplace, and payments across six markets under PCI DSS, PSD2/SCA, and 3DS, with 10,000+ branded apps on a shared platform; grown a regulated FinTech from one product to five as SVP Engineering under RBI NBFC; and contributed to India’s national multilingual computing standard BIS IS 16333 (Part 3), used at population scale. Independently, he runs a continuing line of work on infrastructure that can be inspected, reproduced, and corrected — currently OpenSLM.ai and the Corrigibility framework — and writes Layer 8 on Substack.',
+  long: [
+    'Anivar A. Aravind is an engineering leader and systems thinker with two decades in the hard seat — where engineering has to ship commercially and hold up under board and public scrutiny at the same time.',
+    'He has scaled platforms in global commerce, regulated FinTech, and multilingual public computing used by hundreds of millions. In B2B2C global commerce, he has led multi-tenant SaaS, marketplace, and payments across six markets — full PCI DSS, PSD2/SCA, and 3DS, with 10,000+ branded apps on a shared platform. In regulated FinTech, he was SVP Engineering through 3.75× growth, taking one product to five under RBI NBFC, with audit-grade controls designed in by default rather than bolted on under pressure. He has rebuilt multi-site engineering orgs across the UK and India under both growth and cost pressure, sat on both sides of the table on M&A and technical diligence, and operates AI as a first-class layer — agentic systems in regulated production with governance, memory, and workflow boundaries built in.',
+    'He brings to boardrooms an adversarial systems judgment most operators do not: the instinct to find the failure mode before it finds the system. Independently, he runs a continuing line of work on infrastructure that can be inspected, reproduced, and corrected — currently OpenSLM.ai (the Open Small Models Accord) and the Corrigibility framework — and writes Layer 8 on Substack.',
+    'He shaped India’s national multilingual computing standard BIS IS 16333 (Part 3) and contributes upstream at Unicode, IDNA, and ICANN, including ECMAScript 2025 work on Mozilla Rhino. He sits on the SFLC.in advisory board and the Just AI Awards jury (2024, 2025). Deccan Herald recognised him as a Changemaker (2024).',
+  ],
+};
+
+const pullQuotes = [
+  'Scaling systems is straightforward. Scaling systems that can be trusted is not.',
+  'In the boardroom, my job is the failure mode. Audit-grade controls designed in by default, not bolted on under pressure. Blast radius before feature velocity.',
+  'Corrigibility is not a moral preference. It is a stability requirement — without it, errors accumulate without bound.',
+  'A controller must possess at least as many response states as the system it regulates. Most digital public infrastructure ships with the controller missing.',
+  'Open weights without affordable retraining is not openness — it is permission to inspect a system you can never reproduce.',
+  'AI runs at machine speed. Decisions run at meeting speed. The interesting engineering is now in the gap between the two.',
+];
+
+const attributionTerms = [
+  {
+    term: 'Systems thinker',
+    use: 'Default register. Use in profiles, panels, and bylines.',
+  },
+  {
+    term: 'Independent technologist',
+    use: 'Cool register. Use when context is policy or research and the audience needs distance from any employer.',
+  },
+  {
+    term: 'Engineering critic',
+    use: 'Sharp register. Use only when the piece centres a specific systemic critique he has authored.',
+  },
+];
+---
+
+<BaseLayout title={title} description={description} containerClass="container-wide">
+  <article>
+    <header class="hd">
+      <span class="kicker">Press</span>
+      <h1>For media.</h1>
+      <p class="lede">
+        Bios at four lengths, portraits at print and web resolution, recent
+        appearances, and a complete record of coverage. Everything here is
+        free to use under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>
+        with attribution to <em>Anivar A. Aravind</em>.
+      </p>
+    </header>
+
+    <section aria-labelledby="bios">
+      <h2 id="bios">Bios</h2>
+
+      <div class="bio">
+        <h3>One-line.</h3>
+        <p class="bio__text">{bios.oneLine}</p>
+      </div>
+
+      <div class="bio">
+        <h3>Short — <span class="bio__count">~55 words</span>.</h3>
+        <p class="bio__text">{bios.short}</p>
+      </div>
+
+      <div class="bio">
+        <h3>Medium — <span class="bio__count">~135 words</span>.</h3>
+        <p class="bio__text">{bios.medium}</p>
+      </div>
+
+      <div class="bio">
+        <h3>Long — <span class="bio__count">~280 words</span>.</h3>
+        {bios.long.map((p) => <p class="bio__text">{p}</p>)}
+      </div>
+    </section>
+
+    <section aria-labelledby="assets">
+      <h2 id="assets">Portraits &amp; assets</h2>
+      <ul class="t-list">
+        <li>
+          <div class="t-list__row">
+            <span class="t-list__label">Portrait — square</span>
+            <p class="t-list__body">Web (1×) and print (3×). <span class="tail">[asset pending — replace placeholder]</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="t-list__row">
+            <span class="t-list__label">Portrait — 3:2</span>
+            <p class="t-list__body">Web (1×) and print (3×). <span class="tail">[asset pending]</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="t-list__row">
+            <span class="t-list__label">Corrigibility diagram</span>
+            <p class="t-list__body">Four-layer feedback loop, PNG and SVG, CC0. <span class="tail">[asset pending]</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="t-list__row">
+            <span class="t-list__label">Press kit (PDF)</span>
+            <p class="t-list__body">One page, printable. <span class="tail">[asset pending]</span></p>
+          </div>
+        </li>
+        <li>
+          <div class="t-list__row">
+            <span class="t-list__label">Brand line</span>
+            <p class="t-list__body"><em>Anivar A. Aravind</em> on first reference; <em>Anivar</em> thereafter.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="attribution">
+      <h2 id="attribution">How to attribute (non-official terms)</h2>
+      <ul class="t-list">
+        {
+          attributionTerms.map((t) => (
+            <li>
+              <div class="t-list__row">
+                <span class="t-list__label">{t.term}</span>
+                <p class="t-list__body">{t.use}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="quotes">
+      <h2 id="quotes">Pull-quotes</h2>
+      <ul class="quotes">
+        {pullQuotes.map((q) => (
+          <li><blockquote>{q}</blockquote></li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="coverage">
+      <h2 id="coverage">Coverage</h2>
+      <p>
+        A curated marquee of outlets follows. The full chronological log is
+        being restored from the 2022 archive and extended to present, with
+        archive.org fallbacks for paywalled or dead URLs. <span class="tail">[in migration]</span>
+      </p>
+      <ul class="t-list">
+        <li><div class="t-list__row"><span class="t-list__label">MIT Tech Review</span><p class="t-list__body">Featured commentary on Aadhaar and population-scale identity.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Forbes</span><p class="t-list__body">Quoted on platform accountability.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">The Hindu</span><p class="t-list__body">Quoted on Indic-language computing standards and digital public infrastructure.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">The Wire</span><p class="t-list__body">On Aadhaar, identity, and reversibility.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Hindustan Times</span><p class="t-list__body">On net neutrality and the Save the Internet campaign.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Business Standard</span><p class="t-list__body">On engineering governance in regulated FinTech.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Medianama</span><p class="t-list__body">On India Stack, DPI, and corrigibility.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Global Voices</span><p class="t-list__body">On free-software in Indian-language computing.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Mint</span><p class="t-list__body">Quoted on consumer-tech standards.</p></div></li>
+        <li><div class="t-list__row"><span class="t-list__label">Moneycontrol</span><p class="t-list__body">On AI governance in regulated production.</p></div></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact for media</h2>
+      <p>
+        <a href="mailto:media@anivar.net">media@anivar.net</a>. Typical response within
+        two business days. Available for background and on-record interviews.
+        Indian-language interviews available — Malayalam, Hindi, Tamil on request.
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .hd {
+    max-width: var(--measure-prose);
+    margin-bottom: 3rem;
+  }
+
+  .bio {
+    border-top: 1px solid var(--line);
+    padding-block: 1.5rem;
+  }
+
+  .bio h3 {
+    margin: 0 0 0.6rem;
+    font-family: var(--sans);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .bio__count {
+    color: var(--ink-4);
+    font-weight: 500;
+  }
+
+  .bio__text {
+    max-width: var(--measure-prose);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .quotes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .quotes > li {
+    border-bottom: 1px solid var(--line);
+    padding-block: 1.5rem;
+  }
+
+  .quotes blockquote {
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+  }
+</style>

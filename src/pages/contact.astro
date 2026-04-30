@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Contact';
+const description =
+  'Three lanes: media, advisory, and research. Direct email and expected response windows for each.';
+---
+
+<BaseLayout title={title} description={description}>
+  <article>
+    <header>
+      <span class="kicker">Contact</span>
+      <h1>Three lanes.</h1>
+    </header>
+
+    <section>
+      <h2>Media</h2>
+      <p>
+        <a href="mailto:media@anivar.net">media@anivar.net</a> &middot;
+        Background and on-record interviews. Bios, portraits, and a coverage
+        log live at <a href="/press/">/press/</a>. Indian-language interviews
+        available — Malayalam, Hindi, Tamil on request. Typical response within
+        two business days.
+      </p>
+    </section>
+
+    <section>
+      <h2>Advisory</h2>
+      <p>
+        <a href="mailto:advisory@anivar.net">advisory@anivar.net</a> &middot;
+        Selective. Boards, technical diligence, engineering org reviews,
+        regulated-AI rollout. Brief fit before any conversation: scope, board
+        and regulator context, and the failure mode the engagement is trying
+        to surface.
+      </p>
+    </section>
+
+    <section>
+      <h2>Research</h2>
+      <p>
+        <a href="mailto:research@anivar.net">research@anivar.net</a> &middot;
+        Citations, reuse, peer feedback, and joint work on corrigibility,
+        small-model openness, and digital public infrastructure. Public
+        artefacts at <a href="/research/">/research/</a> and
+        <a href="/corrigibility/">/corrigibility/</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>General</h2>
+      <p>
+        <a href="mailto:ping@anivar.net">ping@anivar.net</a>.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

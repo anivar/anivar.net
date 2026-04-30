@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'About';
+const description =
+  'About Anivar A. Aravind — engineering leader, systems thinker, and independent researcher. Two decades in the hard seat across regulated FinTech, B2B2C global commerce, and population-scale public computing.';
+---
+
+<BaseLayout title={title} description={description} ogType="profile">
+  <article>
+    <header>
+      <span class="kicker">About</span>
+      <h1>About Anivar.</h1>
+    </header>
+
+    <p class="lede">
+      I work where engineering has to ship commercially, hold up under board
+      scrutiny, and reach population scale at once. Two decades in that seat —
+      regulated FinTech, global commerce across six markets, multilingual
+      public computing used by hundreds of millions. Alongside the day job, I
+      run a continuing line of independent work on infrastructure that can be
+      inspected, reproduced, and corrected.
+    </p>
+
+    <h2>Principles</h2>
+
+    <h3>1. The hard seat.</h3>
+    <p>
+      Operating where commercial pressure, board exposure, and public consequence
+      all hold at once is the only seat that produces the judgment a board
+      actually needs. Theory describes the system; the hard seat is where the
+      system meets contradiction — a regulator and a customer asking for
+      opposite things on the same week, audit-grade controls landing under a
+      revenue deadline, the third 3DS edge case the spec did not anticipate.
+      That seat is where adversarial systems judgment is forged. It cannot be
+      franchised from the outside.
+    </p>
+
+    <h3>2. Adversarial systems judgment.</h3>
+    <p>
+      The instinct is to find the failure mode before it finds the system.
+      Every architecture proposal carries an unspoken bet about what stays
+      stable and what does not — provider, regulation, attacker capability,
+      latency budget, supply chain, the team. Finding which of those bets is
+      the load-bearing one and what happens when it breaks is the engineering
+      content that matters in the boardroom. It cannot be franchised, only
+      practised — and only practised in the seat.
+    </p>
+
+    <h3>3. An independent line of work.</h3>
+    <p>
+      I write Layer&nbsp;8, publish working papers under CC0, and ship
+      projects (OpenSLM, Corrigibility, Indic Project) outside any employer
+      because the discipline keeps the day job honest. The day job runs on
+      shipped product and shareholder interest; the independent line runs on
+      whether the argument holds when nothing depends on it. The two
+      registers correct each other. Without the independent line, technical
+      conviction collapses into whatever the current quarter rewards. Without
+      the day job, the independent line collapses into commentary.
+    </p>
+
+    <h2>Selected recognition</h2>
+    <ul class="t-list">
+      <li>
+        <div class="t-list__row">
+          <span class="t-list__label">2024</span>
+          <p class="t-list__body"><em>Deccan Herald</em> Changemaker, recognising sustained work on accountable digital infrastructure.</p>
+        </div>
+      </li>
+      <li>
+        <div class="t-list__row">
+          <span class="t-list__label">2024 / 2025</span>
+          <p class="t-list__body">Just AI Awards — jury.</p>
+        </div>
+      </li>
+      <li>
+        <div class="t-list__row">
+          <span class="t-list__label">Standing</span>
+          <p class="t-list__body">SFLC.in advisory board.</p>
+        </div>
+      </li>
+      <li>
+        <div class="t-list__row">
+          <span class="t-list__label">Standards</span>
+          <p class="t-list__body">Contributor, BIS&nbsp;IS&nbsp;16333 (Part&nbsp;3) — India's national standard for Indic-language computing. Upstream contributions at Unicode, IDNA, ICANN; ECMAScript&nbsp;2025 work on Mozilla Rhino.</p>
+        </div>
+      </li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      For media: <a href="/press/">/press/</a> &middot;
+      For citations: <a href="/research/">/research/</a> &middot;
+      Direct: <a href="mailto:ping@anivar.net">ping@anivar.net</a>.
+    </p>
+  </article>
+</BaseLayout>

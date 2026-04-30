@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPI Corrigibility</title>
+    <style>
+        :root { --bg: #0d1117; --fg: #c9d1d9; --accent: #58a6ff; --border: #30363d; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--fg); padding: 2rem; line-height: 1.5; }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { color: #fff; font-size: 1.4rem; margin-bottom: 0.25rem; }
+        .sub { color: #8b949e; font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .breadcrumb { color: #8b949e; margin-bottom: 1rem; font-size: 0.85rem; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .paper { background: #161b22; border: 1px solid #238636; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem; }
+        .paper h2 { font-size: 1rem; margin-bottom: 0.5rem; color: #fff; }
+        .paper p { color: #8b949e; font-size: 0.85rem; margin-bottom: 0.75rem; }
+        .paper a { display: inline-block; background: #238636; color: #fff; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; }
+        .paper a:hover { background: #2ea043; }
+        .tests { display: flex; gap: 0.4rem; margin-bottom: 0.75rem; }
+        .test { padding: 0.25rem 0.5rem; background: var(--bg); border-radius: 3px; font-size: 0.7rem; font-weight: 600; }
+        .schema { background: #161b22; border: 1px solid var(--border); border-radius: 6px; padding: 1rem; margin: 0.75rem 0; }
+        .schema h3 { font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .schema p { color: #8b949e; font-size: 0.8rem; margin-bottom: 0.5rem; }
+        .schema a { color: var(--accent); font-size: 0.8rem; }
+        code { background: var(--bg); padding: 0.15rem 0.3rem; border-radius: 3px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="breadcrumb"><a href="../">← Corrigibility Framework</a></p>
+        <h1>Digital Public Infrastructure</h1>
+        <p class="sub">Rule of the Code — The Invariant Topology</p>
+
+        <div class="paper">
+            <h2>Paper</h2>
+            <div class="tests">
+                <span class="test" style="color:#f85149">EXIT</span>
+                <span class="test" style="color:#3fb950">CODE</span>
+                <span class="test" style="color:#58a6ff">AUDIT</span>
+                <span class="test" style="color:#d29922">GOVERN</span>
+                <span class="test" style="color:#a371f7">FORK</span>
+            </div>
+            <p>Five structural tests from control theory and commons governance. 50pp, April 2026.</p>
+            <a href="paper.pdf">Download PDF</a>
+        </div>
+
+        <div class="schema">
+            <h3>Infrastructure Manifest</h3>
+            <p>Operator disclosure schema</p>
+            <a href="https://github.com/anivar/corrigibility-schema/blob/main/schema/dpi/infrastructure.json"><code>infrastructure.json</code></a>
+        </div>
+
+        <div class="schema">
+            <h3>Corrigibility Assessment</h3>
+            <p>Five-test evaluation schema</p>
+            <a href="https://github.com/anivar/corrigibility-schema/blob/main/schema/dpi/audit.json"><code>audit.json</code></a>
+        </div>
+    </div>
+</body>
+</html>
