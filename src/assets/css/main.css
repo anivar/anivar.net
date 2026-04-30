@@ -111,7 +111,7 @@ header.site .bar {
   text-underline-offset: 0.3em;
   text-decoration-thickness: 1px;
 }
-.sep { color: var(--rule); padding: 0 0.1rem; }
+.sep { color: var(--ink-mute); padding: 0 0.1rem; }
 
 /* Main */
 main.main {
