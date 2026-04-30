@@ -27,15 +27,14 @@ npm run clean    # remove ./_site
 |---|---|
 | A canonical fact about the site | `src/_data/site.json` |
 | A nav link | `src/_data/nav.json` |
-| A career row | `src/_data/operatingRange.json` |
-| A working-idea entry | `src/_data/workingIdeas.json` |
-| A project | `src/_data/projects.json` (and `src/pages/projects/<slug>.njk`) |
-| A recognition | `src/_data/recognitions.json` |
+| A role, project, standard, fellowship, award, talk, paper, press, or post | `src/_data/log.json` (single event log; one entry per event) |
+| A project's own page | `src/pages/projects/<slug>.njk` (in addition to its log entry) |
 | A "Now" line | `src/_data/now.json` |
 | A bio length | `src/_data/bios.json` |
 | The Quote-me-as block | `src/_data/quoteme.json` |
 | A long-form post | `src/pages/writing/<slug>.md` (collection wiring pending) |
-| A talk | `src/pages/talks.njk` (manual until log rebuild) |
+
+Every event in `log.json` is a `{kind, title, date, end_date, ongoing, org, themes, blurb, …}` record. Pages render filtered views: `/projects/` shows `kind === 'project'`, `/press/` shows recognitions, `/history/` shows the full year-grouped chronology, `/about/`'s Operator career groups by `careerGroup`. Backfilling old talks, press clippings, and papers is just a matter of appending more entries.
 
 ## Migration from `/var/www/anivar.net`
 
