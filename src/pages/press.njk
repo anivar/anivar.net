@@ -61,18 +61,20 @@ description: Quote-me-as block, bios at three lengths, press log, recognitions, 
   </section>
 
   <section aria-labelledby="recog">
-    <h2 id="recog">Recognitions</h2>
-    <ul class="recog">
-      {% for r in recognitions %}
+    <h2 id="recog">Recognitions, standards, and fellowships</h2>
+    <ul class="log-list">
+      {% for r in log | byKinds('award,standard,fellowship,contribution') %}
         <li>
-          <span>
-            <span class="label">{{ r.label }}</span>
-            {% if r.context %}<span class="context">{{ r.context }}</span>{% endif %}
+          <span class="badge badge-{{ r.kind }}">{{ r.kind | kindLabel }}</span>
+          <span class="entry">
+            <span class="title">{{ r.title }}{% if r.org %} — {{ r.org }}{% endif %}</span>
+            {% if r.blurb %}<span class="blurb">{{ r.blurb }}</span>{% endif %}
           </span>
-          <span class="year">{{ r.year }}</span>
+          <span class="when">{{ r | spanLabel }}</span>
         </li>
       {% endfor %}
     </ul>
+    <p class="muted"><a href="/history/">Full chronology →</a></p>
   </section>
 
   <section aria-labelledby="log">

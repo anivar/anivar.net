@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+title: Chronology
+description: A year-grouped chronology of roles, projects, standards, fellowships, and recognitions. Maintained as a public credibility log.
+permalink: /history/index.html
+---
+<article>
+  <header>
+    <p class="eyebrow">Chronology</p>
+    <h1>Year by year.</h1>
+    <p class="lede">A public log of roles, independent projects, standards, fellowships, and recognitions. Curated, not exhaustive — entries are added as they land. Backfill from older archives is in progress.</p>
+  </header>
+
+  <section aria-labelledby="legend">
+    <h2 id="legend" class="sr-only">Legend</h2>
+    <p class="legend">
+      <span class="badge badge-role">Role</span>
+      <span class="badge badge-project">Project</span>
+      <span class="badge badge-standard">Standard</span>
+      <span class="badge badge-fellowship">Fellowship</span>
+      <span class="badge badge-award">Recognition</span>
+      <span class="badge badge-contribution">Contribution</span>
+    </p>
+  </section>
+
+  <section aria-labelledby="log">
+    <h2 id="log" class="sr-only">Chronology</h2>
+    {% for group in log | groupByYear %}
+      <section class="year-group" aria-labelledby="y{{ group.year }}">
+        <h3 id="y{{ group.year }}" class="year-heading">{{ group.year }}</h3>
+        <ul class="log-list">
+          {% for e in group.items %}
+            <li>
+              <span class="badge badge-{{ e.kind }}">{{ e.kind | kindLabel }}</span>
+              <span class="entry">
+                <span class="title">
+                  {% if e.internalHref or e.external %}
+                    <a href="{{ e.internalHref or e.external }}">{{ e.title }}</a>
+                  {% else %}
+                    {{ e.title }}
+                  {% endif %}
+                  {% if e.org %} — {{ e.org }}{% endif %}
+                </span>
+                {% if e.blurb %}<span class="blurb">{{ e.blurb }}</span>{% endif %}
+                {% if e.scope %}<span class="blurb">{{ e.scope }}</span>{% endif %}
+                {% if e.role and e.kind == 'project' %}<span class="blurb"><strong>{{ e.role }}</strong></span>{% endif %}
+              </span>
+              <span class="when">{{ e | spanLabel }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </section>
+
+  <footer>
+    <p class="muted">For citation, citations of specific entries land at <code>/history/#&lt;year&gt;</code>. Reuse under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Corrections welcome at <a href="mailto:{{ site.email.media }}">{{ site.email.media }}</a>.</p>
+  </footer>
+</article>

@@ -23,14 +23,21 @@ description: Two-decade engineering career across global commerce, RBI-regulated
   <section aria-labelledby="career">
     <h2 id="career">Operator career</h2>
     <ul class="t-list">
-      {% for group in operatingRange.groups %}
-        <li class="group-label">{{ group.label }}</li>
-        <li>
-          <ul class="rows">
-            {% for row in group.rows %}<li><span class="role">{{ row.role }}</span><span class="span">{{ row.span }}</span></li>{% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
+      {% set currently = log | byCareerGroup('currently') %}
+      {% set recent = log | byCareerGroup('recent') %}
+      {% set earlier = log | byCareerGroup('earlier') %}
+      {% if currently.length %}
+        <li class="group-label">Currently</li>
+        <li><ul class="rows">{% for r in currently %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
+      {% if recent.length %}
+        <li class="group-label">Recent</li>
+        <li><ul class="rows">{% for r in recent | reverse %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
+      {% if earlier.length %}
+        <li class="group-label">Earlier</li>
+        <li><ul class="rows">{% for r in earlier %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
     </ul>
     <p class="muted">
       Multi-region delivery across the UK, India, and global operations. Regulated FinTech operating
@@ -45,32 +52,37 @@ description: Two-decade engineering career across global commerce, RBI-regulated
 
   <section aria-labelledby="standards">
     <h2 id="standards">Standards, policy, and governance</h2>
-    <ul>
-      <li>Co-author, <strong>Indian Standard IS 16333 (Part 3)</strong> on Indic-language computing.</li>
-      <li>Worked on <strong>ECMAScript 2025</strong> conformance via Mozilla Rhino.</li>
-      <li><strong>ICANN UASG</strong> and <strong>Neo-Brahmi Generation Panel</strong> contributor.</li>
-      <li><strong>Advisory Board, SFLC.in</strong> (2016 –).</li>
-      <li><strong>Observer Member, MLCommons</strong> (2024 –).</li>
-      <li><strong>Mozilla Representative</strong> (2015 – 2018).</li>
-      <li><strong>Jury, Just AI Awards</strong> (2024, 2025).</li>
-      <li><strong>ICANN Fellow</strong> at ICANN57 and ICANN60; continuing contributor.</li>
+    <ul class="t-list">
+      <li><ul class="rows">
+        {% for r in log | byCareerGroup('standards') | reverse %}
+          <li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>
+        {% endfor %}
+        {% for r in log | byKind('standard') %}
+          <li><span class="role">Co-author, {{ r.title }}{% if r.org %} ({{ r.org }}){% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>
+        {% endfor %}
+        {% for r in log | byKind('award') %}
+          <li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>
+        {% endfor %}
+      </ul></li>
     </ul>
+    <p class="muted">Worked on ECMAScript 2025 conformance via Mozilla Rhino. ICANN UASG and Neo-Brahmi Generation Panel contributor.</p>
   </section>
 
   <section aria-labelledby="independent">
-    <h2 id="independent">Independent work</h2>
+    <h2 id="independent">Independent collective work</h2>
     <ul class="wi-list">
-      {% for w in workingIdeas %}
+      {% for w in log | byTheme('collective') %}
         <li>
-          <p class="name">{{ w.name }}</p>
+          <p class="name">{{ w.title }}</p>
           <div class="body">
             <p class="scope">{{ w.scope }}</p>
-            <p class="desc">{{ w.body }}</p>
-            <p class="link"><a href="{{ w.href }}">{{ w.linkLabel }}</a></p>
+            <p class="desc">{{ w.role }} · {{ w | spanLabel }}</p>
+            <p class="link"><a href="{{ w.external or w.internalHref }}">{{ (w.external or w.internalHref) | replace("https://", "") | replace("http://", "") }}</a></p>
           </div>
         </li>
       {% endfor %}
     </ul>
+    <p class="muted"><a href="/projects/">Independent projects and writing →</a></p>
   </section>
 
   <section aria-labelledby="education">

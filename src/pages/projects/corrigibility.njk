@@ -45,12 +45,12 @@ description: Framework for systems that can be corrected without being captured.
   <section aria-labelledby="related">
     <h2 id="related">Related independent work</h2>
     <ul class="wi-list">
-      {% for w in workingIdeas %}{% if w.name != "Corrigibility" %}
+      {% for w in log | byKind('project') %}{% if w.slug != "corrigibility" %}
         <li>
-          <p class="name">{{ w.name }}</p>
+          <p class="name">{{ w.title }}</p>
           <div class="body">
             <p class="scope">{{ w.scope }}</p>
-            <p class="link"><a href="{{ w.href }}">{{ w.linkLabel }}</a></p>
+            <p class="link"><a href="{{ w.internalHref }}">{{ w.internalHref }}</a>{% if w.external %} · <a href="{{ w.external }}">{{ w.external | replace("https://", "") | replace("/", "") }}</a>{% endif %}</p>
           </div>
         </li>
       {% endif %}{% endfor %}

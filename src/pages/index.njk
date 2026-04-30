@@ -26,27 +26,39 @@ permalink: /index.html
   <section aria-labelledby="op">
     <h2 id="op">Operating Range</h2>
     <ul class="t-list">
-      {% for group in operatingRange.groups %}
-        <li class="group-label">{{ group.label }}</li>
-        <li>
-          <ul class="rows">
-            {% for row in group.rows %}<li><span class="role">{{ row.role }}</span><span class="span">{{ row.span }}</span></li>{% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
+      {% set currently = log | byCareerGroup('currently') %}
+      {% set recent = log | byCareerGroup('recent') %}
+      {% set earlier = log | byCareerGroup('earlier') %}
+      {% set standards = log | byCareerGroup('standards') %}
+      {% if currently.length %}
+        <li class="group-label">Currently</li>
+        <li><ul class="rows">{% for r in currently %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
+      {% if recent.length %}
+        <li class="group-label">Recent</li>
+        <li><ul class="rows">{% for r in recent | reverse %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
+      {% if earlier.length %}
+        <li class="group-label">Earlier</li>
+        <li><ul class="rows">{% for r in earlier %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
+      {% if standards.length %}
+        <li class="group-label">Standards &amp; policy</li>
+        <li><ul class="rows">{% for r in standards | reverse %}<li><span class="role">{{ r.title }}{% if r.org %}, {{ r.org }}{% endif %}</span><span class="span">{{ r | spanLabel }}</span></li>{% endfor %}</ul></li>
+      {% endif %}
     </ul>
   </section>
 
   <section aria-labelledby="wi">
     <h2 id="wi">Long-running work</h2>
     <ul class="wi-list">
-      {% for w in workingIdeas %}
+      {% for w in log | byTheme('collective') %}
         <li>
-          <p class="name">{{ w.name }}</p>
+          <p class="name">{{ w.title }}</p>
           <div class="body">
             <p class="scope">{{ w.scope }}</p>
-            <p class="desc">{{ w.body }}</p>
-            <p class="link"><a href="{{ w.href }}">{{ w.linkLabel }}</a></p>
+            <p class="desc">{{ w.role }} · {{ w | spanLabel }}</p>
+            <p class="link"><a href="{{ w.external or w.internalHref }}">{{ (w.external or w.internalHref) | replace("https://", "") | replace("http://", "") }}</a></p>
           </div>
         </li>
       {% endfor %}
@@ -57,17 +69,17 @@ permalink: /index.html
   <section aria-labelledby="recog">
     <h2 id="recog">Selected Recognition</h2>
     <ul class="recog">
-      {% for r in recognitions %}
+      {% for r in log | byKinds('award,standard,fellowship') | limit(5) %}
         <li>
           <span>
-            <span class="label">{{ r.label }}</span>
-            {% if r.context %}<span class="context">{{ r.context }}</span>{% endif %}
+            <span class="label">{{ r.title }}{% if r.org %} — {{ r.org }}{% endif %}</span>
+            {% if r.blurb %}<span class="context">{{ r.blurb }}</span>{% endif %}
           </span>
-          <span class="year">{{ r.year }}</span>
+          <span class="year">{{ r | spanLabel }}</span>
         </li>
       {% endfor %}
     </ul>
-    <p class="muted"><a href="/press/">Full press and recognitions log →</a></p>
+    <p class="muted"><a href="/history/">Full chronology →</a> · <a href="/press/">Press kit →</a></p>
   </section>
 
   <section aria-labelledby="now">

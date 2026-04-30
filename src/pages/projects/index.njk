@@ -12,12 +12,12 @@ description: Independent work — Corrigibility, OpenSLM, Layer 8, the Indic Pro
 
   <section>
     <ul class="wi-list">
-      {% for p in projects %}
+      {% for p in log | byKind('project') %}
         <li>
-          <p class="name">{{ p.name }}</p>
+          <p class="name">{{ p.title }}</p>
           <div class="body">
             <p class="scope">{{ p.scope }}</p>
-            <p class="desc"><strong>{{ p.role }}</strong> · {{ p.dates }}</p>
+            <p class="desc"><strong>{{ p.role }}</strong> · {{ p | spanLabel }}</p>
             <p class="link">
               <a href="{{ p.internalHref }}">More on this site →</a>{% if p.external %} · <a href="{{ p.external }}">{{ p.external | replace("https://", "") | replace("/", "") }}</a>{% endif %}
             </p>

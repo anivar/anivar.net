@@ -1,0 +1,237 @@
+[
+  {
+    "id": "role-foodhub-global-head-of-engineering",
+    "kind": "role",
+    "title": "Global Head of Engineering",
+    "org": "Foodhub",
+    "date": "2024-06-01",
+    "end_date": null,
+    "ongoing": true,
+    "themes": ["career", "global-commerce"],
+    "careerGroup": "currently"
+  },
+  {
+    "id": "role-kinara-capital-svp-engineering",
+    "kind": "role",
+    "title": "Senior Vice President, Engineering",
+    "org": "Kinara Capital",
+    "date": "2022-01-01",
+    "end_date": "2024-05-31",
+    "themes": ["career", "fintech"],
+    "careerGroup": "recent"
+  },
+  {
+    "id": "role-kinara-capital-engineering-head",
+    "kind": "role",
+    "title": "Engineering Head",
+    "org": "Kinara Capital",
+    "date": "2021-01-01",
+    "end_date": "2024-05-31",
+    "themes": ["career", "fintech"],
+    "careerGroup": "recent"
+  },
+  {
+    "id": "role-paisool-head-of-products-engineering",
+    "kind": "role",
+    "title": "Head of Products & Engineering",
+    "org": "Paisool",
+    "date": "2017-01-01",
+    "end_date": "2020-12-31",
+    "themes": ["career", "fintech"],
+    "careerGroup": "recent"
+  },
+  {
+    "id": "role-earlier-engineering-and-civic-tech",
+    "kind": "role",
+    "title": "ICFOSS · SocialForge · FSFI · NCRC · SAATHII",
+    "org": null,
+    "date": "2005-01-01",
+    "end_date": "2015-12-31",
+    "themes": ["career", "civic-tech"],
+    "careerGroup": "earlier"
+  },
+
+  {
+    "id": "role-sflc-in-advisory-board",
+    "kind": "role",
+    "title": "Advisory Board",
+    "org": "Software Freedom Law Center, India (SFLC.in)",
+    "date": "2016-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "themes": ["standards", "civic-tech"],
+    "careerGroup": "standards"
+  },
+  {
+    "id": "fellowship-icann",
+    "kind": "fellowship",
+    "title": "ICANN Fellow & Contributor",
+    "org": null,
+    "date": "2016-11-01",
+    "end_date": null,
+    "ongoing": true,
+    "themes": ["standards", "internet-governance"],
+    "careerGroup": "standards",
+    "blurb": "Fellow at ICANN57 (Hyderabad) and ICANN60 (Abu Dhabi). Continuing contributor on Universal Acceptance and the Neo-Brahmi Generation Panel."
+  },
+  {
+    "id": "role-mlcommons-observer",
+    "kind": "role",
+    "title": "Observer Member",
+    "org": "MLCommons",
+    "date": "2024-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "themes": ["standards", "ai-governance"],
+    "careerGroup": "standards",
+    "blurb": "Open ML benchmarks and standards."
+  },
+  {
+    "id": "role-mozilla-representative",
+    "kind": "role",
+    "title": "Mozilla Representative",
+    "org": null,
+    "date": "2015-01-01",
+    "end_date": "2018-12-31",
+    "themes": ["standards", "open-web"],
+    "careerGroup": "standards"
+  },
+  {
+    "id": "contribution-gsoc-mentor",
+    "kind": "contribution",
+    "title": "Google Summer of Code Mentor",
+    "org": "Google",
+    "date": "2007-01-01",
+    "end_date": "2016-12-31",
+    "themes": ["open-source"],
+    "careerGroup": "standards"
+  },
+  {
+    "id": "contribution-psf-member",
+    "kind": "contribution",
+    "title": "Member",
+    "org": "Python Software Foundation",
+    "date": "2014-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "themes": ["open-source"]
+  },
+
+  {
+    "id": "project-corrigibility",
+    "kind": "project",
+    "slug": "corrigibility",
+    "title": "Corrigibility",
+    "role": "Author",
+    "scope": "Framework for systems that can be corrected without being captured. Two papers (DPI, EPI) and a schema repository.",
+    "date": "2026-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "internalHref": "/projects/corrigibility/",
+    "external": null,
+    "themes": ["ai-governance"]
+  },
+  {
+    "id": "project-openslm",
+    "kind": "project",
+    "slug": "openslm",
+    "title": "OpenSLM",
+    "role": "Author",
+    "scope": "Open Small Models Accord — ten principles for small open models that can be trusted at scale.",
+    "date": "2026-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "internalHref": "/projects/openslm/",
+    "external": "https://openslm.ai/",
+    "themes": ["ai-governance"]
+  },
+  {
+    "id": "project-layer-8",
+    "kind": "project",
+    "slug": "layer-8",
+    "title": "Layer 8",
+    "role": "Author",
+    "scope": "Daily newsletter on standards, identity, and AI infrastructure. Where intent meets execution.",
+    "date": "2025-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "internalHref": "/projects/layer-8/",
+    "external": "https://thelayer8.substack.com/",
+    "themes": ["writing"]
+  },
+  {
+    "id": "project-indic-project",
+    "kind": "project",
+    "slug": "indic-project",
+    "title": "Indic Project",
+    "role": "Executive Director",
+    "scope": "Concluded collective on Indian-language computing.",
+    "date": "2014-01-01",
+    "end_date": "2018-12-31",
+    "internalHref": "/projects/indic-project/",
+    "external": "https://indicproject.org/",
+    "themes": ["civic-tech", "indic-language", "collective"]
+  },
+  {
+    "id": "project-moving-republic",
+    "kind": "project",
+    "slug": "moving-republic",
+    "title": "Moving Republic",
+    "role": "Founder & Executive Director",
+    "scope": "Civic-tech venture.",
+    "date": "2006-01-01",
+    "end_date": "2012-12-31",
+    "internalHref": "/projects/moving-republic/",
+    "external": "https://movingrepublic.org/",
+    "themes": ["civic-tech", "collective"]
+  },
+  {
+    "id": "project-smc",
+    "kind": "project",
+    "slug": "smc",
+    "title": "Swathanthra Malayalam Computing",
+    "role": "Coordinator & Secretary, 2007 – 2014; contributor since 2003",
+    "scope": "Indian-language free software collective.",
+    "date": "2003-01-01",
+    "end_date": null,
+    "ongoing": true,
+    "internalHref": "/projects/smc/",
+    "external": "https://smc.org.in/",
+    "themes": ["civic-tech", "indic-language", "open-source", "collective"]
+  },
+
+  {
+    "id": "standard-is-16333-part-3",
+    "kind": "standard",
+    "title": "Indian Standard IS 16333 (Part 3)",
+    "org": "Bureau of Indian Standards",
+    "date": "2017-01-01",
+    "themes": ["standards", "indic-language"],
+    "blurb": "Information technology — Indian script code for information interchange — Enhanced Inscript layout. Co-author."
+  },
+  {
+    "id": "award-deccan-herald-changemaker",
+    "kind": "award",
+    "title": "Changemaker",
+    "org": "Deccan Herald",
+    "date": "2014-01-01",
+    "themes": ["recognition"],
+    "blurb": "Recognised for work on Indian-language computing and digital rights."
+  },
+  {
+    "id": "award-just-ai-jury-2024",
+    "kind": "award",
+    "title": "Jury, Just AI Awards",
+    "org": "AI Forum of India",
+    "date": "2024-01-01",
+    "themes": ["ai-governance"]
+  },
+  {
+    "id": "award-just-ai-jury-2025",
+    "kind": "award",
+    "title": "Jury, Just AI Awards",
+    "org": "AI Forum of India",
+    "date": "2025-01-01",
+    "themes": ["ai-governance"]
+  }
+]
