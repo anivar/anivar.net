@@ -1,0 +1,36 @@
+{
+  "url": "https://anivar.net",
+  "name": "Anivar A. Aravind",
+  "title": "Anivar A. Aravind — engineering executive and systems thinker",
+  "positioning": "Anivar A. Aravind — engineering leadership and systems thinking for technology that has to ship commercially, hold up under regulator and board scrutiny, and reach population scale at once.",
+  "operatorLine": "Twenty-year engineering leader. Global commerce, RBI-regulated FinTech, multilingual public computing. Platforms used by hundreds of millions.",
+  "editorialLine": "Systems thinker on AI governance, corrigibility, and the human layer of software. Writes Layer 8.",
+  "identityStrip": [
+    "Engineering executive",
+    "Board member",
+    "Systems thinker",
+    "Independent technologist"
+  ],
+  "email": {
+    "general": "ping@anivar.net",
+    "media": "media@anivar.net",
+    "advisory": "advisory@anivar.net",
+    "research": "research@anivar.net"
+  },
+  "elsewhere": {
+    "linkedin": "https://www.linkedin.com/in/anivar/",
+    "github": "https://github.com/anivar",
+    "substack": "https://thelayer8.substack.com/",
+    "openslm": "https://openslm.ai/",
+    "indicproject": "https://indicproject.org/",
+    "movingrepublic": "https://movingrepublic.org/",
+    "smc": "https://smc.org.in/",
+    "orcid": "https://orcid.org/0009-0009-8995-0005"
+  },
+  "buildDate": "2026-04-30",
+  "license": {
+    "code": "MIT",
+    "content": "CC BY 4.0",
+    "papers": "CC0 1.0"
+  }
+}

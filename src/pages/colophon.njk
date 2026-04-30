@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+title: Colophon
+description: How this site is built. Stack, fonts, hosting, licence.
+---
+<article>
+  <header>
+    <p class="eyebrow">Colophon</p>
+    <h1>How this site is built.</h1>
+  </header>
+
+  <section>
+    <h2>Stack</h2>
+    <ul>
+      <li><strong>Generator</strong> — <a href="https://www.11ty.dev/">Eleventy</a> 3.x. Plain HTML output, no client-side framework.</li>
+      <li><strong>JavaScript</strong> — vanilla, used only for copy-to-clipboard on <a href="/press/">/press/</a>. Site renders fully with JS disabled.</li>
+      <li><strong>Hosting</strong> — GitHub Pages, custom domain <code>anivar.net</code>, HTTPS via Let's Encrypt.</li>
+      <li><strong>Source</strong> — <a href="https://github.com/anivar/anivar.net">github.com/anivar/anivar.net</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <ul>
+      <li><strong>Display &amp; body serif</strong> — Source Serif 4 Variable (Adobe, OFL).</li>
+      <li><strong>UI &amp; metadata sans</strong> — Inter Variable (Rasmus Andersson, OFL).</li>
+      <li><strong>Code</strong> — JetBrains Mono Variable (JetBrains, OFL).</li>
+    </ul>
+    <p>All three are self-hosted as variable WOFF2 files via <a href="https://fontsource.org/">fontsource</a>, subset to Latin + extended punctuation, no external CDN, no Google Fonts.</p>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <p>No analytics. No third-party scripts. No consent banner because nothing is tracked. If self-hosted analytics are wired later they will be a privacy-preserving option (GoatCounter or Plausible) at <code>analytics.anivar.net</code>, with no PII collected.</p>
+  </section>
+
+  <section>
+    <h2>Licence</h2>
+    <ul>
+      <li>Site source: <a href="https://opensource.org/licenses/MIT">MIT</a>.</li>
+      <li>Site copy and assets: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</li>
+      <li>Papers: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Build</h2>
+    <p>CI runs on push to <code>main</code>: <code>axe-core</code>, <code>Pa11y</code>, and <code>htmlproofer</code> gates; Lighthouse CI for performance budget. Deploy via GitHub Actions to GitHub Pages.</p>
+    <p class="muted">Last built: {{ site.buildDate }}.</p>
+  </section>
+</article>

@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+title: About
+description: Two-decade engineering career across global commerce, RBI-regulated FinTech, and multilingual public computing; standards work; independent research.
+---
+<article class="about">
+
+  <header>
+    <p class="eyebrow">About</p>
+    <h1>Engineering executive and systems thinker.</h1>
+  </header>
+
+  <section>
+    {% set bio = bios.long.split("\n\n") %}
+    {% for p in bio %}<p{% if loop.first %} class="lede"{% endif %}>{{ p }}</p>{% endfor %}
+
+    <figure class="portrait">
+      {% portrait "anivar.jpg", "Anivar A. Aravind, head-and-shoulders portrait." %}
+      <figcaption>Photograph reproduced with permission. <span class="muted">[TODO: photographer credit]</span></figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="career">
+    <h2 id="career">Operator career</h2>
+    <ul class="t-list">
+      {% for group in operatingRange.groups %}
+        <li class="group-label">{{ group.label }}</li>
+        <li>
+          <ul class="rows">
+            {% for row in group.rows %}<li><span class="role">{{ row.role }}</span><span class="span">{{ row.span }}</span></li>{% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="muted">
+      Multi-region delivery across the UK, India, and global operations. Regulated FinTech operating
+      experience covering PCI&nbsp;DSS, PSD2/SCA, 3DS, and RBI NBFC compliance. M&amp;A and technical
+      diligence experience on both sides of the table. Multi-site engineering org leadership: hiring,
+      levelling, performance management, succession planning. Monolith → modular / API-first /
+      event-driven transformation at Kinara Capital. 3.75× growth, one product to five, as SVP
+      Engineering at Kinara. 10,000+ branded apps on a shared platform across six markets in global
+      commerce.
+    </p>
+  </section>
+
+  <section aria-labelledby="standards">
+    <h2 id="standards">Standards, policy, and governance</h2>
+    <ul>
+      <li>Co-author, <strong>Indian Standard IS 16333 (Part 3)</strong> on Indic-language computing.</li>
+      <li>Worked on <strong>ECMAScript 2025</strong> conformance via Mozilla Rhino.</li>
+      <li><strong>ICANN UASG</strong> and <strong>Neo-Brahmi Generation Panel</strong> contributor.</li>
+      <li><strong>Advisory Board, SFLC.in</strong> (2016 –).</li>
+      <li><strong>Observer Member, MLCommons</strong> (2024 –).</li>
+      <li><strong>Mozilla Representative</strong> (2015 – 2018).</li>
+      <li><strong>Jury, Just AI Awards</strong> (2024, 2025).</li>
+      <li><strong>ICANN Fellow</strong> at ICANN57 and ICANN60; continuing contributor.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="independent">
+    <h2 id="independent">Independent work</h2>
+    <ul class="wi-list">
+      {% for w in workingIdeas %}
+        <li>
+          <p class="name">{{ w.name }}</p>
+          <div class="body">
+            <p class="scope">{{ w.scope }}</p>
+            <p class="desc">{{ w.body }}</p>
+            <p class="link"><a href="{{ w.href }}">{{ w.linkLabel }}</a></p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="education">
+    <h2 id="education">Education</h2>
+    <p>Cochin University of Science and Technology — B.Tech, Information Technology. 2001 – 2005.</p>
+  </section>
+
+</article>

@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Now
+description: What's current this quarter — operator and editorial both. Updated quarterly.
+---
+<article>
+  <header>
+    <p class="eyebrow">Now — as of {{ now.asOf | dateLong }}</p>
+    <h1>What's current this quarter.</h1>
+  </header>
+
+  <section>
+    <ul class="now-list">
+      {% for item in now.items %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+    <p class="muted">Inspired by Derek Sivers' <a href="https://nownownow.com/about">/now page</a>. Updated quarterly. Last update: {{ now.asOf | dateISO }}.</p>
+  </section>
+</article>

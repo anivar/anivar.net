@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "label": "Currently",
+      "rows": [
+        { "role": "Global Head of Engineering, Foodhub", "span": "Jun 2024 –" }
+      ]
+    },
+    {
+      "label": "Recent",
+      "rows": [
+        { "role": "Senior Vice President, Engineering, Kinara Capital", "span": "2022 – 2024" },
+        { "role": "Engineering Head, Kinara Capital", "span": "2021 – 2024" },
+        { "role": "Head of Products & Engineering, Paisool", "span": "2017 – 2020" }
+      ]
+    },
+    {
+      "label": "Earlier",
+      "rows": [
+        { "role": "ICFOSS · SocialForge · FSFI · NCRC · SAATHII", "span": "2005 – 2015" }
+      ]
+    },
+    {
+      "label": "Standards & policy",
+      "rows": [
+        { "role": "Advisory Board, SFLC.in", "span": "2016 –" },
+        { "role": "ICANN Fellow & Contributor", "span": "2016 –" },
+        { "role": "MLCommons Observer", "span": "2024 –" },
+        { "role": "Mozilla Representative", "span": "2015 – 2018" },
+        { "role": "GSoC Mentor (Google)", "span": "2007 – 2016" }
+      ]
+    }
+  ]
+}

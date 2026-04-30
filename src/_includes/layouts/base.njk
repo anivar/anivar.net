@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include "partials/head.njk" %}
+    {% if isHome %}{% include "partials/jsonld.njk" %}{% endif %}
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    {% include "partials/header.njk" %}
+    <main id="main" class="main" tabindex="-1">
+      {{ content | safe }}
+    </main>
+    {% include "partials/footer.njk" %}
+  </body>
+</html>

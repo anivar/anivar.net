@@ -1,0 +1,9 @@
+Site:        https://anivar.net
+Standard:    WCAG 2.2 AA, AAA on body-text contrast
+Tested:      Keyboard-only; NVDA (Windows); VoiceOver (macOS, iOS); TalkBack (Android); Orca (Linux)
+Tooling:     axe-core, Pa11y, htmlproofer in CI on every push to main
+Policy:      Build fails on any new violation
+Report:      media@anivar.net
+Issues:      https://github.com/anivar/anivar.net/issues
+Statement:   https://anivar.net/accessibility/
+Last audit:  2026-04-30

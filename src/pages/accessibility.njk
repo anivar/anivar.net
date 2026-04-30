@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: Accessibility
+description: WCAG 2.2 AA conformance, AAA on body-text contrast. Keyboard-only, screen-reader tested. Report issues at media@anivar.net.
+---
+<article>
+  <header>
+    <p class="eyebrow">Accessibility</p>
+    <h1>Accessibility statement.</h1>
+    <p class="lede">This site targets WCAG 2.2 AA conformance, with AAA on body-text contrast.</p>
+  </header>
+
+  <section>
+    <h2>What this means in practice</h2>
+    <ul>
+      <li>All interactive elements reachable by keyboard. Focus rings visible at AAA contrast.</li>
+      <li>Skip-to-content link on every page.</li>
+      <li>Semantic HTML: one <code>&lt;h1&gt;</code> per page, ordered headings, named landmark regions (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+      <li>All images carry descriptive alt text or <code>alt=""</code> when decorative.</li>
+      <li>The site renders fully with JavaScript disabled. JavaScript is used only to enhance the press-kit copy-buttons.</li>
+      <li><code>prefers-reduced-motion</code> is honoured. No autoplay video, no autoplay audio, no carousels.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tested on</h2>
+    <p>Keyboard-only navigation; NVDA on Windows; VoiceOver on macOS and iOS; TalkBack on Android; Orca on Linux. CI pipeline runs <code>axe-core</code> and <code>Pa11y</code> against every page on every push to <code>main</code>; the build fails on any new violation.</p>
+  </section>
+
+  <section>
+    <h2>Reporting issues</h2>
+    <p>If something doesn't work for you, please write to <a href="mailto:{{ site.email.media }}">{{ site.email.media }}</a> or open an issue at <a href="https://github.com/anivar/anivar.net/issues">github.com/anivar/anivar.net/issues</a>. Include the URL, your assistive technology and version, and what you expected to happen.</p>
+    <p class="muted">A plain-text version of this statement lives at <a href="/.well-known/accessibility.txt">/.well-known/accessibility.txt</a>.</p>
+    <p class="muted">Last audit: {{ site.buildDate }}.</p>
+  </section>
+</article>

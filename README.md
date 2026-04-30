@@ -1,53 +1,61 @@
 # anivar.net
 
-Personal site of Anivar A. Aravind — engineering leader, systems thinker, independent researcher.
+Personal site of Anivar A. Aravind.
 
-Built with [Astro](https://astro.build/). Deploys to GitHub Pages via Actions.
+Built with [Eleventy](https://www.11ty.dev/). Deploys to GitHub Pages via Actions.
 
 ## Local development
 
 ```sh
 npm install
-npm run dev      # http://localhost:4321
-npm run build    # produces ./dist
-npm run preview  # serve the built site
+npm run dev      # http://localhost:8080
+npm run build    # produces ./_site
+npm run clean    # remove ./_site
 ```
 
 ## Stack
 
-- **Astro** static site, no JS required to read content.
-- **Self-hosted fonts** via Fontsource (Source Serif 4, Inter, JetBrains Mono).
-- **Sitemap** auto-generated to `/sitemap-index.xml`.
-- **Atom feed** at `/feed.xml` (covers `/research/` and `/writing/`; populated by the build step once content collections are wired).
+- **Eleventy 3.x** static site, no client-side framework. Vanilla JS only on `/press/` for copy-to-clipboard; site renders fully with JS off.
+- **Self-hosted variable fonts** via fontsource (Source Serif 4, Inter, JetBrains Mono).
+- **Sitemap** at `/sitemap.xml`.
+- **Atom feed** at `/feed.xml` (covers `/writing/`; populated as the cross-post bridge to Layer 8 lands).
+- **OG image** generated at build time by `scripts/og-card.mjs` → `_site/og.png`.
 
 ## Content authoring
 
 | To add… | Edit |
 |---|---|
-| A project | `src/pages/projects.astro` — append to the `entries` array. |
-| A media citation | `src/pages/press.astro` — append to the coverage list. |
-| A talk | `src/pages/talks.astro` — append a new entry under the year. |
-| A working paper | `src/pages/research.astro` — append to the papers list. |
-| A Layer 8 cross-post | `src/pages/writing.astro` — once the RSS mirror is wired, posts auto-populate; until then, append manually. |
-| Bios / pull-quotes | `src/pages/press.astro` — `bios` and `pullQuotes` constants at the top. |
+| A canonical fact about the site | `src/_data/site.json` |
+| A nav link | `src/_data/nav.json` |
+| A career row | `src/_data/operatingRange.json` |
+| A working-idea entry | `src/_data/workingIdeas.json` |
+| A project | `src/_data/projects.json` (and `src/pages/projects/<slug>.njk`) |
+| A recognition | `src/_data/recognitions.json` |
+| A "Now" line | `src/_data/now.json` |
+| A bio length | `src/_data/bios.json` |
+| The Quote-me-as block | `src/_data/quoteme.json` |
+| A long-form post | `src/pages/writing/<slug>.md` (collection wiring pending) |
+| A talk | `src/pages/talks.njk` (manual until log rebuild) |
 
 ## Migration from `/var/www/anivar.net`
 
-The current `/corrigibility/` long-read and PDFs have been copied into `public/corrigibility/`. After the cutover the existing VPS can be decommissioned for `anivar.net`.
+The current `/corrigibility/` long-read and PDFs have been copied into `public/corrigibility/`. After the cutover, the existing VPS can be decommissioned for `anivar.net`.
 
 ## Privacy
 
-No Google Analytics. No third-party scripts. No consent banner. Self-hosted analytics will be wired separately at `analytics.anivar.net`.
+No analytics. No third-party scripts. No consent banner. If self-hosted analytics are wired later they will live at `analytics.anivar.net` (GoatCounter or Plausible).
 
 ## Licensing
 
-- Site source: permissive (this repo).
+- Site source: [MIT](LICENSE).
 - Site copy and assets: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Papers: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ## Deploy
 
-Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds with the official `withastro/action@v3` and deploys to GitHub Pages.
+Pushes to `main` trigger `.github/workflows/deploy.yml`, which runs `npm ci`, `npm run build`, and deploys `_site/` via `actions/deploy-pages@v4`.
+
+A separate workflow `.github/workflows/a11y.yml` runs Pa11y CI against every page on push and PR; configuration in `.pa11yci.json`.
 
 DNS:
 
@@ -59,4 +67,4 @@ anivar.net      A     185.199.111.153
 www.anivar.net  CNAME anivar.github.io.
 ```
 
-(Use the `CNAME` file in `public/` — already populated.)
+(`CNAME` file lives at `public/CNAME` — already populated.)

@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+title: Press
+description: Quote-me-as block, bios at three lengths, press log, recognitions, portrait kit.
+---
+<article>
+  <header>
+    <p class="eyebrow">Press</p>
+    <h1>Press kit.</h1>
+    <p class="lede">For interviews, citations, and reuse. Email <a href="mailto:{{ site.email.media }}">{{ site.email.media }}</a> for anything not on this page.</p>
+  </header>
+
+  <section aria-labelledby="quote">
+    <h2 id="quote">Quote me as</h2>
+    <p class="muted">Each line is the right one for a context. Pick the one that fits and copy it as-is.</p>
+    <ul class="quote-block" id="quoteme">
+      {% for line in quoteme %}
+        <li>
+          <span data-quote>{{ line }}</span>
+          <button type="button" class="copy" data-copy aria-label="Copy line {{ loop.index }}">Copy</button>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="muted">When a publication needs an institutional anchor, the fifth (two-sentence) form supplies one. Independent work first, employer second; never inverted.</p>
+  </section>
+
+  <section aria-labelledby="bios">
+    <h2 id="bios">Bios — three lengths</h2>
+    <div class="bio-block">
+      <details open>
+        <summary>Short (≤ 40 words)</summary>
+        <div class="bio-body" data-quote>
+          <p>{{ bios.short }}</p>
+        </div>
+        <button type="button" class="copy" data-copy-target="prev">Copy</button>
+      </details>
+      <details>
+        <summary>Medium (≤ 110 words)</summary>
+        <div class="bio-body" data-quote>
+          <p>{{ bios.medium }}</p>
+        </div>
+        <button type="button" class="copy" data-copy-target="prev">Copy</button>
+      </details>
+      <details>
+        <summary>Long (≤ 240 words)</summary>
+        <div class="bio-body" data-quote>
+          {% for p in bios.long.split("\n\n") %}<p>{{ p }}</p>{% endfor %}
+        </div>
+        <button type="button" class="copy" data-copy-target="prev">Copy</button>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="portraits">
+    <h2 id="portraits">Portraits</h2>
+    <p class="muted">Square portrait, head-and-shoulders, dark backdrop. Reproduce with credit. Higher-resolution print files on request via media@anivar.net.</p>
+    <figure class="portrait">
+      {% portrait "anivar.jpg", "Anivar A. Aravind, head-and-shoulders portrait." %}
+      <figcaption>Web display, ≤ 480px. Photographer credit pending — request the file at <a href="mailto:{{ site.email.media }}">media@anivar.net</a>.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="recog">
+    <h2 id="recog">Recognitions</h2>
+    <ul class="recog">
+      {% for r in recognitions %}
+        <li>
+          <span>
+            <span class="label">{{ r.label }}</span>
+            {% if r.context %}<span class="context">{{ r.context }}</span>{% endif %}
+          </span>
+          <span class="year">{{ r.year }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="log">
+    <h2 id="log">Press log</h2>
+    <p class="muted">Rebuild from the 2022 <code>/press/</code> archive in progress; recent items will land here with original publication dates and links. Historical clippings preserve their original employer attribution verbatim — those are quotes of the publication, not current self-description.</p>
+  </section>
+
+  <section aria-labelledby="recommendations">
+    <h2 id="recommendations">Selected recommendations</h2>
+    <p class="muted">Excerpts from LinkedIn recommendations available on request via <a href="mailto:{{ site.email.media }}">media@anivar.net</a>. Will appear here as the user approves quotation.</p>
+  </section>
+</article>
+
+<script src="/assets/js/copy.js" defer></script>

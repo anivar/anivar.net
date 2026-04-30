@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Projects
+description: Independent work — Corrigibility, OpenSLM, Layer 8, the Indic Project, Moving Republic, and Swathanthra Malayalam Computing.
+---
+<article>
+  <header>
+    <p class="eyebrow">Projects</p>
+    <h1>Independent work, six lines.</h1>
+    <p class="lede">Each runs on its own clock. None of them is the whole job.</p>
+  </header>
+
+  <section>
+    <ul class="wi-list">
+      {% for p in projects %}
+        <li>
+          <p class="name">{{ p.name }}</p>
+          <div class="body">
+            <p class="scope">{{ p.scope }}</p>
+            <p class="desc"><strong>{{ p.role }}</strong> · {{ p.dates }}</p>
+            <p class="link">
+              <a href="{{ p.internalHref }}">More on this site →</a>{% if p.external %} · <a href="{{ p.external }}">{{ p.external | replace("https://", "") | replace("/", "") }}</a>{% endif %}
+            </p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>

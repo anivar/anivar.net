@@ -1,0 +1,32 @@
+name: Accessibility audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Install audit tools
+        run: npm i -D pa11y-ci http-server
+
+      - name: Serve and run Pa11y
+        run: |
+          npx http-server _site -p 8080 -s &
+          sleep 2
+          npx pa11y-ci
+        env:
+          PA11Y_CI_BASE_URL: http://127.0.0.1:8080

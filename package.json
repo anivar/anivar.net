@@ -1,21 +1,23 @@
 {
   "name": "anivar-net",
-  "type": "module",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Personal site of Anivar A. Aravind — engineering leader, systems thinker, independent researcher.",
+  "description": "anivar.net — engineering leadership and systems thinking. Static site.",
+  "license": "MIT",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "eleventy && node scripts/og-card.mjs",
+    "build:og": "node scripts/og-card.mjs",
+    "dev": "eleventy --serve --port=8080",
+    "clean": "rm -rf _site"
   },
-  "dependencies": {
-    "@astrojs/sitemap": "^3.2.0",
-    "@fontsource-variable/inter": "^5.2.8",
-    "@fontsource-variable/source-serif-4": "^5.2.9",
-    "@fontsource-variable/jetbrains-mono": "^5.2.5",
-    "astro": "^5.0.0"
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@fontsource-variable/inter": "^5.0.21",
+    "@fontsource-variable/jetbrains-mono": "^5.0.22",
+    "@fontsource-variable/source-serif-4": "^5.0.21",
+    "luxon": "^3.5.0",
+    "sharp": "^0.33.5"
   }
 }

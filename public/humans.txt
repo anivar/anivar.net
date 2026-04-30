@@ -1,0 +1,15 @@
+/* TEAM */
+
+   Name:    Anivar A. Aravind
+   Site:    https://anivar.net
+   Twitter: —
+   GitHub:  https://github.com/anivar
+   ORCID:   0009-0009-8995-0005
+
+/* SITE */
+
+   Last update:    2026/04/30
+   Standards:      HTML5, CSS, ECMAScript progressive enhancement
+   Components:     Eleventy 3.x (static), self-hosted variable fonts
+   Software:       Built and deployed via GitHub Actions to GitHub Pages
+   Source:         https://github.com/anivar/anivar.net

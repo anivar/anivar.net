@@ -1,0 +1,18 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for page in collections.all -%}
+  {%- if not page.data.eleventyExcludeFromCollections and page.url and not page.url.startsWith("/404") -%}
+  <url>
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    <lastmod>{{ page.date | dateISO }}</lastmod>
+  </url>
+  {%- endif -%}
+  {%- endfor -%}
+  <url><loc>{{ site.url }}/corrigibility/</loc><lastmod>2026-04-29</lastmod></url>
+  <url><loc>{{ site.url }}/corrigibility/dpi/</loc><lastmod>2026-04-29</lastmod></url>
+  <url><loc>{{ site.url }}/corrigibility/epi/</loc><lastmod>2026-04-29</lastmod></url>
+</urlset>

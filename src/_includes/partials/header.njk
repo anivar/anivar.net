@@ -1,0 +1,8 @@
+<header class="site" role="banner">
+  <div class="bar">
+    <a class="brand" href="/" aria-label="Anivar A. Aravind, home">Anivar&nbsp;A.&nbsp;Aravind</a>
+    <nav class="nav" aria-label="Primary">
+      {% for item in nav %}<a href="{{ item.href }}"{% if page.url == item.href or (item.href != "/" and page.url.startsWith(item.href)) %} aria-current="page"{% endif %}>{{ item.label }}</a>{% if not loop.last %}<span class="sep" aria-hidden="true">·</span>{% endif %}{% endfor %}
+    </nav>
+  </div>
+</header>

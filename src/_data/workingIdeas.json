@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Layer 8",
+    "scope": "Daily newsletter on standards, identity, AI systems",
+    "body": "Where intent meets execution. 704 subscribers.",
+    "href": "https://thelayer8.substack.com/",
+    "linkLabel": "thelayer8.substack.com"
+  },
+  {
+    "name": "OpenSLM",
+    "scope": "Open Small Models Accord",
+    "body": "Ten principles for small open models that can be trusted at scale.",
+    "href": "https://openslm.ai/",
+    "linkLabel": "openslm.ai"
+  },
+  {
+    "name": "Corrigibility",
+    "scope": "Framework for systems that can be corrected without being captured.",
+    "body": "Two-paper framework: DPI (Rule of the Code) and EPI (Rule of the Workflow).",
+    "href": "/projects/corrigibility/",
+    "linkLabel": "/projects/corrigibility/"
+  },
+  {
+    "name": "Indic Project",
+    "scope": "Concluded collective on Indian-language computing.",
+    "body": "Executive Director, 2014 – 2018.",
+    "href": "https://indicproject.org/",
+    "linkLabel": "indicproject.org"
+  },
+  {
+    "name": "Moving Republic",
+    "scope": "Civic-tech venture, 2006 – 2012.",
+    "body": "Founder & Executive Director.",
+    "href": "https://movingrepublic.org/",
+    "linkLabel": "movingrepublic.org"
+  },
+  {
+    "name": "Swathanthra Malayalam Computing (SMC)",
+    "scope": "Indian-language free software collective.",
+    "body": "Contributor since 2003; Coordinator & Secretary, 2007 – 2014.",
+    "href": "https://smc.org.in/",
+    "linkLabel": "smc.org.in"
+  }
+]

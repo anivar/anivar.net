@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+title: Corrigibility
+description: Framework for systems that can be corrected without being captured. Two papers — DPI and EPI — and a schema repository.
+---
+<article>
+  <header>
+    <p class="eyebrow">Project</p>
+    <h1>Corrigibility</h1>
+    <p class="lede">A framework for systems that can be corrected without being captured. One of several lines of independent work — not the whole job.</p>
+  </header>
+
+  <section>
+    <p>The framework is two companion papers and a versioned schema repository. Paper&nbsp;I (DPI, <em>Rule of the Code</em>) develops the invariant topology — five structural tests rooted in control theory and commons governance. Paper&nbsp;II (EPI, <em>Rule of the Workflow</em>) extends the same logic to learned and agentic systems and surfaces the failure modes specific to them: opacity, compute capture, governance denial of service.</p>
+
+    <p>The body of the framework — schemas, rules, measures — lives in the schema repository, versioned <code>v1.7-spec</code>. The papers stay focused on argument and proof.</p>
+  </section>
+
+  <section aria-labelledby="papers">
+    <h2 id="papers">The two papers</h2>
+    <ul class="recog">
+      <li>
+        <span>
+          <span class="label"><strong>Paper I — DPI: Rule of the Code</strong></span>
+          <span class="context">Five structural tests; ~50 pp.; SSRN DOI <a href="https://doi.org/10.2139/ssrn.6059075">10.2139/ssrn.6059075</a>.</span>
+        </span>
+        <span class="year">v3.0, 2026</span>
+      </li>
+      <li>
+        <span>
+          <span class="label"><strong>Paper II — EPI: Rule of the Workflow</strong></span>
+          <span class="context">Learned and agentic public infrastructure; ~32 pp.; Zenodo DOI <a href="https://doi.org/10.5281/zenodo.19863649">10.5281/zenodo.19863649</a>.</span>
+        </span>
+        <span class="year">v3.0, 2026</span>
+      </li>
+    </ul>
+    <p><a href="/corrigibility/">Read the long-form pages and download the PDFs →</a></p>
+  </section>
+
+  <section aria-labelledby="why">
+    <h2 id="why">Why this exists</h2>
+    <p>Population-scale software runs on infrastructure operated by parties with their own incentives. Most governance debates argue about <em>who</em> should hold authority. The framework asks the prior question: <em>what structural properties must hold for any holder of authority to remain correctable?</em> Five of them, the framework argues, and they are testable.</p>
+  </section>
+
+  <section aria-labelledby="related">
+    <h2 id="related">Related independent work</h2>
+    <ul class="wi-list">
+      {% for w in workingIdeas %}{% if w.name != "Corrigibility" %}
+        <li>
+          <p class="name">{{ w.name }}</p>
+          <div class="body">
+            <p class="scope">{{ w.scope }}</p>
+            <p class="link"><a href="{{ w.href }}">{{ w.linkLabel }}</a></p>
+          </div>
+        </li>
+      {% endif %}{% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="discuss">
+    <h2 id="discuss">Discussion</h2>
+    <p>Recent essays on Layer 8 work through the framework's pieces in plainer language — start with <a href="https://thelayer8.substack.com/">thelayer8.substack.com</a>. Citations, peer feedback, joint work: <a href="mailto:research@anivar.net">research@anivar.net</a>.</p>
+  </section>
+</article>
