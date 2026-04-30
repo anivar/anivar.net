@@ -3,7 +3,10 @@
     "standard": "WCAG2AA",
     "timeout": 30000,
     "wait": 500,
-    "ignore": []
+    "ignore": [],
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+    }
   },
   "urls": [
     "http://127.0.0.1:8080/",
