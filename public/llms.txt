@@ -14,7 +14,9 @@ This site is the canonical home for Anivar Aravind's professional record. The si
 
 ## Projects
 
-- [Corrigibility](https://anivar.net/corrigibility/): Framework for systems that can be corrected without being captured. Two papers (DPI, EPI) and a schema repository.
+- [Corrigibility](https://anivar.net/corrigibility/): Framework for systems that can be corrected without being captured. Two papers and a schema repository.
+  - Paper I — DPI: [doi.org/10.5281/zenodo.18213694](https://doi.org/10.5281/zenodo.18213694) (Zenodo · canonical) · mirror at [doi.org/10.2139/ssrn.6059075](https://doi.org/10.2139/ssrn.6059075) (SSRN)
+  - Paper II — EPI: [doi.org/10.5281/zenodo.19863649](https://doi.org/10.5281/zenodo.19863649) (Zenodo)
 - [OpenSLM](https://anivar.net/projects/openslm/): Open Small Models Accord — ten principles for small open models that can be trusted at scale. Drafting at openslm.ai.
 - [Indic Project](https://anivar.net/projects/indic-project/): Concluded collective on Indian-language computing (2014–2018).
 - [Moving Republic](https://anivar.net/projects/moving-republic/): Civic-tech venture (2006–2012).
