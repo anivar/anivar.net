@@ -127,7 +127,7 @@
     "date": "2026-01-01",
     "end_date": null,
     "ongoing": true,
-    "internalHref": "/projects/corrigibility/",
+    "internalHref": "/corrigibility/",
     "external": null,
     "themes": ["ai-governance"]
   },
@@ -144,20 +144,6 @@
     "internalHref": "/projects/openslm/",
     "external": "https://openslm.ai/",
     "themes": ["ai-governance"]
-  },
-  {
-    "id": "project-layer-8",
-    "kind": "project",
-    "slug": "layer-8",
-    "title": "Layer 8",
-    "role": "Author",
-    "scope": "Daily newsletter on standards, identity, and AI infrastructure. Where intent meets execution.",
-    "date": "2025-01-01",
-    "end_date": null,
-    "ongoing": true,
-    "internalHref": "/projects/layer-8/",
-    "external": "https://thelayer8.substack.com/",
-    "themes": ["writing"]
   },
   {
     "id": "project-indic-project",

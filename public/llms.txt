@@ -1,0 +1,32 @@
+# Anivar Aravind
+
+> Engineering leader and standards/policy contributor. Operating in Indian-language computing, fintech, and global commerce since 2003. Long-running independent work on AI governance and corrigibility.
+
+This site is the canonical home for Anivar Aravind's professional record. The single source of truth for roles, projects, recognitions, standards work, and fellowships is `/history/`, which renders from `src/_data/log.json` in the source repository.
+
+## About
+
+- [About](https://anivar.net/about/): Operator career, standards & policy work, and independent collective work.
+- [History](https://anivar.net/history/): Year-grouped chronology of roles, projects, standards, and recognitions.
+- [Press](https://anivar.net/press/): Recognitions, press contact, and bios at three lengths.
+- [Contact](https://anivar.net/contact/): Direct lines for industry, press, and research.
+- [Now](https://anivar.net/now/): What is currently active.
+
+## Projects
+
+- [Corrigibility](https://anivar.net/corrigibility/): Framework for systems that can be corrected without being captured. Two papers (DPI, EPI) and a schema repository.
+- [OpenSLM](https://anivar.net/projects/openslm/): Open Small Models Accord — ten principles for small open models that can be trusted at scale. Drafting at openslm.ai.
+- [Indic Project](https://anivar.net/projects/indic-project/): Concluded collective on Indian-language computing (2014–2018).
+- [Moving Republic](https://anivar.net/projects/moving-republic/): Civic-tech venture (2006–2012).
+- [Swathanthra Malayalam Computing](https://anivar.net/projects/smc/): Indian-language free software collective. Coordinator & Secretary 2007–2014; contributor since 2003.
+
+## Writing
+
+- [Writing](https://anivar.net/writing/): Long-form, published as Layer 8 on Substack.
+- [Layer 8](https://thelayer8.substack.com/): The blog.
+- [RSS](https://anivar.net/feed.xml): Site feed.
+
+## Reference
+
+- [Accessibility](https://anivar.net/accessibility/): WCAG 2.2 AA conformance statement.
+- [Colophon](https://anivar.net/colophon/): How the site is built.
